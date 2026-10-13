@@ -1,0 +1,100 @@
+/* -------------------------------------------------------------
+   1. Design Token Declarations (Theme Configurations)
+------------------------------------------------------------- */
+:root, [data-theme="light"] {
+  --bg-body: #f4f7f6;
+  --bg-card: #ffffff;
+  --text-main: #2b2d42;
+  --text-muted: #6c757d;
+  --accent: #3a86c8;
+  --border: #e2e8f0;
+}
+
+[data-theme="dark"] {
+  --bg-body: #121214;
+  --bg-card: #1a1a1e;
+  --text-main: #f8f9fa;
+  --text-muted: #adb5bd;
+  --accent: #4ea8de;
+  --border: #2d3748;
+}
+
+[data-theme="cyberpunk"] {
+  --bg-body: #001219;
+  --bg-card: #005f73;
+  --text-main: #ca6702;
+  --text-muted: #e9d8a6;
+  --accent: #94d2bd;
+  --border: #ae2012;
+}
+
+/* -------------------------------------------------------------
+   2. Element Implementations
+------------------------------------------------------------- */
+body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  font-family: system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card h1 {
+  margin-top: 0;
+}
+
+.card p {
+  color: var(--text-muted);
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Accessibility / UI Utilities */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.theme-picker fieldset {
+  border: none;
+  display: flex;
+  gap: 1rem;
+  background: var(--bg-card);
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+}
+
+.theme-option {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
