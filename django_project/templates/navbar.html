@@ -11,6 +11,7 @@
 </head>
 <body>
     {% load i18n %}
+    {% get_current_language as LANGUAGE_CODE %}
     <nav>
         <div class="nav-a">
             <a href="{% url 'home' %}">Home</a>
@@ -18,33 +19,22 @@
             <a href="{% url 'out' %}">Out</a>
         </div>
         <div class="nav-buttons">
-            <form action="{% url 'set_language' %}" method="POST">{% csrf_token %}<select name="language">
-                <option value="en" selected>English</option>
-                <option value="uz">Uzbek</option>
-                <option value="ru">Rusian</option>
-            </select><input type="submit" value="Change language">
+            <form action="{% url 'set_language' %}" method="POST">
+                {% csrf_token %}
+                <select name="language" class="language-select">
+                    <option value="en" {% if LANGUAGE_CODE == 'en' %} selected {% endif %}>English</option>
+                    <option value="uz" {% if LANGUAGE_CODE == 'uz' %} selected {% endif %}>Uzbek</option>
+                    <option value="ru" {% if LANGUAGE_CODE == 'ru' %} selected {% endif %}>Russian</option>
+                </select>
+                <input type="submit" value="Change" class="language-btn">
             </form>
-            <form class="theme-picker">
-                <fieldset>
-                  <legend class="visually-hidden">Choose a color theme</legend>
-
-                  <label class="theme-option">
-                    <input type="radio" name="theme" value="light" checked>
-                    <span>Light</span>
-                  </label>
-
-                  <label class="theme-option">
-                    <input type="radio" name="theme" value="dark">
-                    <span>Dark</span>
-                  </label>
-
-                  <label class="theme-option">
-                    <input type="radio" name="theme" value="cyberpunk">
-                    <span>Cyberpunk</span>
-                  </label>
-                </fieldset>
-            </form>
-            <button>🌙</button>
+            <div class="theme-picker">
+                <select id="theme-select">
+                    <option value="light">Light ☀️</option>
+                    <option value="dark">Dark 🌙</option>
+                    <option value="cyberpunk">Cyberpunk ⚡</option>
+                </select>
+            </div>
         </div>
     </nav>
     {% block content %}

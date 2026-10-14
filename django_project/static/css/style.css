@@ -1,5 +1,4 @@
 /* -------------------------------------------------------------
-   1. Design Token Declarations (Theme Configurations)
 ------------------------------------------------------------- */
 :root, [data-theme="light"] {
   --bg-body: #f4f7f6;
@@ -29,18 +28,102 @@
 }
 
 /* -------------------------------------------------------------
-   2. Element Implementations
 ------------------------------------------------------------- */
 body {
   background-color: var(--bg-body);
   color: var(--text-main);
   font-family: system-ui, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
-  padding: 2rem;
+  padding: 0 5%;
+}
+
+a{text-decoration: none;}
+
+nav{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-a{
+  width: 48%;
+}
+
+.nav-a a{
+  margin-left: 5%;
+}
+
+.nav-buttons{
+  width: 32%;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  gap: 2rem;
+}
+
+.language-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-select {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+.language-select:hover {
+    border-color: var(--accent);
+}
+
+.language-select:focus {
+    border-color: var(--accent);
+}
+
+.language-btn {
+    background-color: var(--accent);
+    color: var(--bg-body);
+    border: none;
+    border-radius: 6px;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.language-btn {
+    background-color: var(--accent);
+    color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.language-btn:hover {
+    opacity: 0.85;
+}
+
+.language-btn:active {
+    transform: scale(0.95);
+}
+
+.theme-picker select {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
 }
 
 .card {
@@ -58,43 +141,4 @@ body {
 
 .card p {
   color: var(--text-muted);
-}
-
-.btn-primary {
-  background-color: var(--accent);
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* Accessibility / UI Utilities */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.theme-picker fieldset {
-  border: none;
-  display: flex;
-  gap: 1rem;
-  background: var(--bg-card);
-  padding: 0.7rem 1.5rem;
-  border-radius: 30px;
-  border: 1px solid var(--border);
-}
-
-.theme-option {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
 }
