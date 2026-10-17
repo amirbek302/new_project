@@ -37,27 +37,106 @@ body {
   padding: 0 5%;
 }
 
-a{text-decoration: none;}
-
-nav{
-  display: flex;
-  justify-content: space-between;
+a {
+    color: var(--accent);
+    text-decoration: none;
 }
 
-.nav-a{
-  width: 48%;
+a:hover {
+    color: var(--text-main);
 }
 
-.nav-a a{
-  margin-left: 5%;
+/* Навигация */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 35px;
+    gap: 20px;
 }
 
-.nav-buttons{
-  width: 32%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+/* Ссылки меню */
+.nav-a {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: nowrap;
 }
+
+.nav-a a:hover {
+    opacity: 0.7;
+}
+
+/* Приветствие пользователя */
+.nav-username {
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+}
+
+/* Форма выхода */
+.logout-form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Кнопка Logout */
+.logout-btn {
+    background-color: var(--bg-card);
+    color: var(--accent);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: var(--accent);
+    color: var(--bg-card);
+    border-color: var(--accent);
+}
+
+/* Переключатели справа */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.nav-buttons form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+/* Для небольших экранов */
+@media (max-width: 750px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 12px 18px;
+    }
+
+    .nav-a {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-buttons {
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+}
+
+
 
 .language-form {
     display: flex;

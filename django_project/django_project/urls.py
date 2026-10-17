@@ -29,6 +29,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('login/', login_views.login, name='login'),
+    path('logout/', login_views.logout, name='logout'),
     path('register/', register_views.register, name='register'),
     path('', home_views.home, name='home'),
 )

@@ -1,5 +1,10 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login as auth_login
+from django.contrib.auth import (
+    authenticate,
+    login as auth_login,
+    logout as auth_logout
+)
+from django.views.decorators.http import require_POST
 from .forms import LoginForm
 
 
@@ -34,3 +39,8 @@ def login(request):
 
     context = {'login_form': login_form}
     return render(request, 'login.html', context)
+
+@require_POST
+def logout(request):
+    auth_logout(request)
+    return redirect('home')

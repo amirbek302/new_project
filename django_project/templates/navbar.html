@@ -15,8 +15,18 @@
     <nav>
         <div class="nav-a">
             <a href="{% url 'home' %}">Home</a>
-            <a href="{% url 'register' %}">Register</a>
-            <a href="{% url 'login' %}">Login</a>
+
+            {% if user.is_authenticated %}
+                <span class="nav-username">Привет, {{ user.username }}!</span>
+                <form action="{% url 'logout' %}" method="POST" class="logout-form">
+                    {% csrf_token %}
+                    <button type="submit" class="logout-btn">Logout</button>
+                </form>
+            {% else %}
+
+                <a href="{% url 'register' %}">Register</a>
+                <a href="{% url 'login' %}">Login</a>
+            {% endif %}
         </div>
         <div class="nav-buttons">
             <form action="{% url 'set_language' %}" method="POST">
