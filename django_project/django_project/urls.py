@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from home import views as home_views
 from register import views as register_views
-from out import views as out_views
+from login import views as login_views
 
 from django.conf.urls.i18n import  i18n_patterns
 
@@ -28,9 +28,7 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-
-    path('', include('django.contrib.auth.urls')),
-    path('out/', out_views.out, name='out'),
+    path('login/', login_views.login, name='login'),
     path('register/', register_views.register, name='register'),
     path('', home_views.home, name='home'),
 )
