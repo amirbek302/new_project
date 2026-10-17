@@ -39,8 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'register',
-    'out',
+    'login',
 ]
+
+# Кастомная модель пользователя
+AUTH_USER_MODEL = 'register.User'
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',

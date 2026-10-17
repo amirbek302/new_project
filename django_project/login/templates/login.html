@@ -1,0 +1,15 @@
+
+{% extends "navbar.html" %}
+{% block content %}
+    <h1>Вход в аккаунт(Login)</h1>
+
+    <main class="card">
+        <form method="POST">
+            {% csrf_token %}
+
+            {{ login_form.as_p }}
+
+            <button type="submit">Войти</button>
+        </form>
+    </main>
+{% endblock %}

@@ -3,8 +3,10 @@
 {% block content %}
     <h1>Register</h1>
     <main class="card">
-        <h1>Dynamic CSS Theming</h1>
-        <p>This layout instantly adapts to custom style tokens via the <code>data-theme</code> attribute.</p>
-        <button class="btn-primary">Action Button</button>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ reg_form.as_p }}
+            <button>Отправить</button>
+        </form>
     </main>
 {% endblock %}
