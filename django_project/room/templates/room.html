@@ -1,0 +1,38 @@
+
+{% extends "navbar.html" %}
+{% block content %}
+    <h1>Hello: {{ user.first_name }}</h1>
+    <h2>It's your Personal Account</h2>
+    <main class="card">
+        <h2>Name: {{ user.first_name }}</h2>
+        <h3>Login: {{ user.username }}</h3>
+        <h3>Your age: {{ user.age }}</h3>
+        <h3>Work: {{ user.work }}</h3>
+        <h3>Hobby: {{ user.hobby|join:", " }}</h3>
+    </main>
+    <section class="card">
+        <h2>Create Post</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ post_form.as_p }}
+            <button class="logout-btn" type="submit">Publish</button>
+        </form>
+    </section>
+    <section class="card">
+        <h2>My Posts</h2>
+        {% for post in posts %}
+            <div class="post-card">
+                <h3>{{ post.author.username }}</h3>
+                <p>{{ post.text }}</p>
+                <p class="post-date">{{ post.created_at|date:"d.m.Y H:i" }}</p>
+                <form method="POST" action="{% url 'delete_post' post.id %}">
+                    {% csrf_token %}
+                    <button class="logout-btn" type="submit">Delete</button>
+                </form>
+            </div>
+        {% empty %}
+            <p>You haven't published any posts yet.</p>
+        {% endfor %}
+    </section>
+
+{% endblock %}

@@ -15,6 +15,7 @@
     <nav>
         <div class="nav-a">
             <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'interesting' %}">Interesting</a>
 
             {% if user.is_authenticated %}
                 <span class="nav-username">Привет, {{ user.username }}!</span>

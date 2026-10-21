@@ -19,6 +19,8 @@ from django.urls import path, include
 from home import views as home_views
 from register import views as register_views
 from login import views as login_views
+from room import views as room_views
+from posts import views as post_views
 
 from django.conf.urls.i18n import  i18n_patterns
 
@@ -31,6 +33,9 @@ urlpatterns += i18n_patterns(
     path('login/', login_views.login, name='login'),
     path('logout/', login_views.logout, name='logout'),
     path('register/', register_views.register, name='register'),
+    path('room/', room_views.room, name='room'),
+    path('room/delete/<int:post_id>/', room_views.delete_post, name='delete_post'),  # <- маршрут удаления
+    path('interesting/', post_views.interesting, name='interesting'),
     path('', home_views.home, name='home'),
 )
 

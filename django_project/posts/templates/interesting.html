@@ -1,0 +1,16 @@
+{% extends "navbar.html" %}
+{% block content %}
+    <main class="card">
+        <h1>Interesting</h1>
+        <h2>All Posts</h2>
+        {% for post in posts %}
+            <div class="post-card">
+                <h3>{{ post.author.username }}</h3>
+                <p>{{ post.text }}</p>
+                <p class="post-date">{{ post.created_at|date:"d.m.Y H:i" }}</p>
+            </div>
+        {% empty %}
+            <p>No posts yet.</p>
+        {% endfor %}
+    </main>
+{% endblock %}
