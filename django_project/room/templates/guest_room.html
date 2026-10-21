@@ -16,10 +16,19 @@
                 <h3>{{ post.author.username }}</h3>
                 <p>{{ post.text }}</p>
                 <p class="post-date">{{ post.created_at|date:"d.m.Y H:i" }}</p>
+                <p>❤️ {{ post.likes.count }}</p>
+
+                {% if user.is_authenticated and user != post.author %}
+                    <form method="POST" action="{% url 'like_post' post.id %}">
+                    {% csrf_token %}
+                        <button type="submit" class="logout-btn">❤️ Like</button>
+                    </form>
+                {% endif %}
             </div>
         {% empty %}
             <p>This user hasn't published any posts yet.</p>
         {% endfor %}
     </section>
+    <input type="hidden" name="next" value="{{ request.path }}">
 
 {% endblock %}

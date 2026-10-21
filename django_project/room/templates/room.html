@@ -25,6 +25,7 @@
                 <h3>{{ post.author.username }}</h3>
                 <p>{{ post.text }}</p>
                 <p class="post-date">{{ post.created_at|date:"d.m.Y H:i" }}</p>
+                <p>❤️ {{ post.likes.count }}</p>
                 <form method="POST" action="{% url 'delete_post' post.id %}">
                     {% csrf_token %}
                     <button class="logout-btn" type="submit">Delete</button>
