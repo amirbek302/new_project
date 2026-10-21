@@ -37,6 +37,7 @@ urlpatterns += i18n_patterns(
     path('room/delete/<int:post_id>/', room_views.delete_post, name='delete_post'),  # <- маршрут удаления
     path('user/<str:username>/', room_views.guest_room, name='guest_room'),
     path('interesting/', post_views.interesting, name='interesting'),
+    path('posts/like/<int:post_id>/', post_views.like_post, name='like_post'),
     path('', home_views.home, name='home'),
 )
 
