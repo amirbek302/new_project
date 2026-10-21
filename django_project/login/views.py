@@ -26,7 +26,7 @@ def login(request):
             if user is not None:
                 # Выполняет вход пользователя в систему, сохраняя его авторизацию в сессии.
                 auth_login(request, user)
-                return redirect('home')
+                return redirect('room')
             else:
                 login_form.add_error(
                     # Добавляет общую ошибку формы, если логин или пароль неправильные.

@@ -18,6 +18,7 @@
 
             {% if user.is_authenticated %}
                 <span class="nav-username">Привет, {{ user.username }}!</span>
+                <a href="{% url 'room' %}">Room</a>
                 <form action="{% url 'logout' %}" method="POST" class="logout-form">
                     {% csrf_token %}
                     <button type="submit" class="logout-btn">Logout</button>
