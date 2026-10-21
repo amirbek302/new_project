@@ -1,1 +1,18 @@
-/django_project/
+# PyCharm
+.idea/
+
+# PostgreSQL password and settings
+.env
+**/.env
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Old SQLite database
+db.sqlite3
+
+# Logs
+*.log
