@@ -146,6 +146,12 @@ nav {
     .theme-picker select {
         font-size: 12px;
     }
+    .card {
+        margin: 15px auto;
+    }
+    .post-card {
+        margin: 15px 0;
+    }
 }
 @media (max-width: 600px) {
     html{
@@ -164,6 +170,12 @@ nav {
     .logout-btn {
         font-size: 10.5px;
         padding: 5px 10px;
+    }
+    .card {
+        margin: 10px auto;
+    }
+    .post-card {
+        margin: 10px 0;
     }
 }
 @media (max-width: 500px) {
@@ -187,6 +199,9 @@ nav {
     }
     .nav-a {
         gap: 4px;
+    }
+    .nav-a .logout-btn{
+        margin: 0 auto;
     }
     .card p textarea{
         font-size: 10px;
@@ -274,7 +289,7 @@ nav {
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 20px;
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .post-card h3 {
