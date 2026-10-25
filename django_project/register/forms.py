@@ -5,12 +5,12 @@ from .models import User
 
 class RegisterForm(UserCreationForm):
     first_name = forms.CharField(
-        label='Имя:',
+        label='Name:',
         max_length=100
     )
 
     username = forms.CharField(
-        label='Логин:',
+        label='Login:',
         max_length=150,
         help_text=''
     )
@@ -20,7 +20,7 @@ class RegisterForm(UserCreationForm):
     )
 
     age = forms.IntegerField(
-        label='Возраст:',
+        label='Age:',
         min_value=1,
         max_value=103
     )
@@ -28,26 +28,26 @@ class RegisterForm(UserCreationForm):
     work = forms.ChoiceField(
         label='Работа:',
         choices=[
-            ('Работает', 'Работает'),
-            ('Безработный', 'Безработный'),
-            ('Студент', 'Студент')
+            ('Employed', 'Employed'),
+            ('Unemployed', 'Unemployed'),
+            ('Student', 'Student')
         ]
     )
 
     hobby = forms.MultipleChoiceField(
         label='Увлечения:',
         choices=[
-            ('Игры', 'Игры'),
-            ('Спорт', 'Спорт'),
-            ('Еда', 'Еда'),
-            ('Танцы', 'Танцы')
+            ('Games', 'Games'),
+            ('Sport', 'Sport'),
+            ('Food', 'Food'),
+            ('Dance', 'Dance')
         ],
         widget=forms.CheckboxSelectMultiple,
         required=False
     )
 
     password1 = forms.CharField(
-        label='Пароль:',
+        label='Password:',
         min_length=8,
         widget=forms.PasswordInput
     )
@@ -55,7 +55,7 @@ class RegisterForm(UserCreationForm):
     # что-бы переспрашивать пароль
 
     password2 = forms.CharField(
-        label='Подтверждение пароля:',
+        label='Confirm password:',
         widget=forms.PasswordInput
     )
 

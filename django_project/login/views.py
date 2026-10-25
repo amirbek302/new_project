@@ -31,7 +31,7 @@ def login(request):
                 login_form.add_error(
                     # Добавляет общую ошибку формы, если логин или пароль неправильные.
                     None,
-                    'Неверный логин или пароль'
+                    'Incorrect login or password'
                 )
 
     else:

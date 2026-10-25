@@ -9,7 +9,7 @@ class PostForm(forms.ModelForm):
 
         widgets = {
             'text': forms.Textarea(attrs={
-                'placeholder': 'Что у вас нового?',
+                'placeholder': 'What’s new with you?',
                 'rows': 4,
                 'maxlength': 500,
             })

@@ -119,20 +119,77 @@ nav {
 }
 
 /* Для небольших экранов */
-@media (max-width: 750px) {
+@media (max-width: 950px) {
     nav {
         flex-wrap: wrap;
         padding: 12px 18px;
     }
 
     .nav-a {
+        margin: 0 auto;
         flex-wrap: wrap;
         gap: 12px;
     }
 
     .nav-buttons {
-        margin-left: 0;
+        margin: 0 auto;
         flex-wrap: wrap;
+    }
+    .logout-btn {
+        font-size: 12px;
+        padding: 7px 14px;
+    }
+    .nav-username {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+    .theme-picker select {
+        font-size: 12px;
+    }
+}
+@media (max-width: 600px) {
+    html{
+        font-size: 85%;
+    }
+    nav {
+        padding: 8px 10px;
+    }
+    .nav-a {
+        gap: 6px;
+    }
+    .nav-username {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    .logout-btn {
+        font-size: 10.5px;
+        padding: 5px 10px;
+    }
+}
+@media (max-width: 500px) {
+    html{
+        font-size: 75%;
+    }
+    .card p textarea{
+        font-size: 12px;
+    }
+    .nav-buttons .theme-picker,
+    .nav-buttons form{
+        margin: 0 auto;
+    }
+}
+@media (max-width: 400px) {
+    html{
+        font-size: 65%;
+    }
+    nav {
+        padding: 4px 5px;
+    }
+    .nav-a {
+        gap: 4px;
+    }
+    .card p textarea{
+        font-size: 10px;
     }
 }
 
@@ -200,7 +257,7 @@ nav {
     padding: 2rem;
     max-width: 400px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .card h1 {

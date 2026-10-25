@@ -2,11 +2,11 @@ from django import forms
 
 
 class LoginForm(forms.Form):
-    login = forms.CharField(label='Логин:',
+    login = forms.CharField(label='Login:',
                             max_length=100
     )
 
-    password = forms.CharField(label='Пароль:',
+    password = forms.CharField(label='Password:',
                              max_length=100,
                              widget=forms.PasswordInput
     )
