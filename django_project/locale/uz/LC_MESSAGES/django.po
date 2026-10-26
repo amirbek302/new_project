@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 13:16+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\login\templates\login.html:4
+msgid "Log in to your account"
+msgstr "Hisobingizga kiring"
+
+#: .\posts\templates\interesting.html:5
+msgid "Interesting"
+msgstr "Qiziqarli"
+
+#: .\posts\templates\interesting.html:6
+msgid "All Posts"
+msgstr "Barcha postlar"
+
+#: .\posts\templates\interesting.html:26
+msgid "No posts yet"
+msgstr "Hozircha postlar yo‘q"
+
+#: .\room\templates\guest_room.html:6
+msgid "Guest Room"
+msgstr "Mehmon xonasi"
+
+#: .\room\templates\guest_room.html:7 .\room\templates\room.html:8
+msgid "Name"
+msgstr "Ism"
+
+#: .\room\templates\guest_room.html:8 .\room\templates\room.html:9
+msgid "Login"
+msgstr "Login"
+
+#: .\room\templates\guest_room.html:9 .\room\templates\room.html:10
+msgid "Your age"
+msgstr "Yoshingiz"
+
+#: .\room\templates\guest_room.html:10 .\room\templates\room.html:11
+msgid "Work"
+msgstr "Ish"
+
+#: .\room\templates\guest_room.html:11 .\room\templates\room.html:12
+msgid "Hobby"
+msgstr "Xobbi"
+
+#: .\room\templates\guest_room.html:14
+msgid "Posts of"
+msgstr "Postni egasi"
+
+#: .\room\templates\guest_room.html:30
+msgid "This user hasn't published any posts yet"
+msgstr "Bu foydalanuvchi hali hech qanday post e’lon qilmagan"
+
+#: .\room\templates\room.html:5 .\templates\navbar.html:21
+msgid "Hello"
+msgstr "Sallom"
+
+#: .\room\templates\room.html:6
+msgid "It's your Personal Account"
+msgstr "Bu sizning shaxsiy sahifangiz"
+
+#: .\room\templates\room.html:15
+msgid "Create Post"
+msgstr "Создать публикацию"
+
+#: .\room\templates\room.html:23
+msgid "My Posts"
+msgstr "Mening postlarim"
+
+#: .\room\templates\room.html:36
+msgid "You haven't published any posts yet"
+msgstr "Siz hali hech qanday post e’lon qilmadingiz"
