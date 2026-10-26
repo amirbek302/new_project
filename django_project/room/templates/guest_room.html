@@ -1,16 +1,17 @@
 
 {% extends "navbar.html" %}
+{% load i18n %}
 {% block content %}
     <main class="card">
-        <h1>Guest Room</h1>
-        <h2>Name: {{ profile_user.first_name }}</h2>
-        <h3>Login: {{ profile_user.username }}</h3>
-        <h3>Age: {{ profile_user.age }}</h3>
-        <h3>Work: {{ profile_user.work }}</h3>
-        <h3>Hobby: {{ profile_user.hobby|join:", " }}</h3>
+        <h1>{% translate "Guest Room" %}</h1>
+        <h2>{% translate "Name" %}: {{ user.first_name }}</h2>
+        <h3>{% translate "Login" %}: {{ user.username }}</h3>
+        <h3>{% translate "Your age" %}: {{ user.age }}</h3>
+        <h3>{% translate "Work" %}: {{ user.work }}</h3>
+        <h3>{% translate "Hobby" %}: {{ user.hobby|join:", " }}</h3>
     </main>
     <section class="card">
-        <h2>{{ profile_user.username }}'s Posts</h2>
+        <h2>{% translate "Posts of" %}:{{ profile_user.username }}</h2>
         {% for post in posts %}
             <div class="post-card">
                 <h3>{{ post.author.username }}</h3>
@@ -26,7 +27,7 @@
                 {% endif %}
             </div>
         {% empty %}
-            <p>This user hasn't published any posts yet.</p>
+            <p>{% translate "This user hasn't published any posts yet" %}.</p>
         {% endfor %}
     </section>
     <input type="hidden" name="next" value="{{ request.path }}">

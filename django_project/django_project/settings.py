@@ -128,6 +128,9 @@ LANGUAGES = [
     ('ru', 'Russian'),
     ('uz', 'Uzbekistan'),
 ]
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
 
 TIME_ZONE = 'UTC'
 USE_TZ = True

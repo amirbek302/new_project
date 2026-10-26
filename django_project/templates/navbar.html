@@ -18,7 +18,7 @@
             <a href="{% url 'interesting' %}">Interesting</a>
 
             {% if user.is_authenticated %}
-                <span class="nav-username">Hello, {{ user.username }}!</span>
+                <span class="nav-username">{% translate "Hello" %}, {{ user.username }}!</span>
                 <a href="{% url 'room' %}">Room</a>
                 <form action="{% url 'logout' %}" method="POST" class="logout-form">
                     {% csrf_token %}

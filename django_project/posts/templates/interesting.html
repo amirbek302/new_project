@@ -1,8 +1,9 @@
 {% extends "navbar.html" %}
+{% load i18n %}
 {% block content %}
     <main class="card">
-        <h1>Interesting</h1>
-        <h2>All Posts</h2>
+        <h1>{% translate "Interesting" %}</h1>
+        <h2>{% translate "All Posts" %}</h2>
         {% for post in posts %}
             <div class="post-card">
                 <h3>
@@ -22,7 +23,7 @@
 
             {% endif %}
         {% empty %}
-            <p>No posts yet.</p>
+            <p>{% translate "No posts yet" %}.</p>
         {% endfor %}
     </main>
 {% endblock %}
