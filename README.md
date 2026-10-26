@@ -79,7 +79,18 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-**8. Запустить сервер**
+**8. Создание перевода и его применение**
+
+```bash
+django-admin makemessages -l ru
+django-admin makemessages -l uz
+#Если уже есть LC_MESSAGES
+#                  django.po то необязательно
+
+python manage.py compilemessages  
+```
+
+**9. Запустить сервер**
 
 ```bash
 python manage.py runserver
@@ -96,3 +107,6 @@ http://127.0.0.1:8000/
 ## Назначение
 
 Практическая работа по Django — создание аналога «Живого журнала».
+
+
+### Если прочитали и не поставили звезду в проект то вы gay
