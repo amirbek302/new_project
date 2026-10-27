@@ -26,7 +26,7 @@ class RegisterForm(UserCreationForm):
     )
 
     work = forms.ChoiceField(
-        label='Работа:',
+        label='Work:',
         choices=[
             ('Employed', 'Employed'),
             ('Unemployed', 'Unemployed'),
@@ -35,7 +35,7 @@ class RegisterForm(UserCreationForm):
     )
 
     hobby = forms.MultipleChoiceField(
-        label='Увлечения:',
+        label='Hobbies:',
         choices=[
             ('Games', 'Games'),
             ('Sport', 'Sport'),
