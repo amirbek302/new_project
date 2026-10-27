@@ -18,13 +18,37 @@
   --border: #2d3748;
 }
 
+[data-theme="dark"] .card {
+  box-shadow: 0 0 12px rgb(0 119 255 / 0.5);
+}
+
+[data-theme="dark"] .post-card {
+  box-shadow: 0 0 12px rgb(0 119 255 / 0.5);
+}
+
+[data-theme="dark"] button {
+  box-shadow: 0 0 12px rgb(78 168 222 / 0.5);
+}
+
 [data-theme="cyberpunk"] {
-  --bg-body: #001219;
-  --bg-card: #005f73;
-  --text-main: #ca6702;
-  --text-muted: #e9d8a6;
-  --accent: #94d2bd;
-  --border: #ae2012;
+  --bg-body: #202438;
+  --bg-card: #2b3048;
+  --text-main: #f0f3ff;
+  --text-muted: #aeb6ce;
+  --accent: #67e8f9;
+  --border: #8273c7;
+}
+
+[data-theme="cyberpunk"] .card {
+  box-shadow: 0 0 12px rgb(255 100 214 / 0.5);
+}
+
+[data-theme="cyberpunk"] .post-card {
+  box-shadow: 0 0 12px rgba(255 100 214 / 0.5);
+}
+
+[data-theme="cyberpunk"] button {
+  box-shadow: 0 0 12px rgb(0 245 255 / 0.5);
 }
 
 /* -------------------------------------------------------------
